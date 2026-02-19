@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jagdish Kumar | Shopify Developer</title>
+  <meta name="description" content="Premium portfolio of Jagdish Kumar — Shopify Developer, CMS Specialist, Liquid Theme Customization, Next.js, Tailwind, WordPress Elementor, QA & E-commerce." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Premium Loader (Back Like Before) -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-dot"></div>
+      <div class="loader-title">Loading Portfolio</div>
+      <div class="loader-sub">Jagdish Kumar • Shopify • Next.js • CMS</div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Background glows -->
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="noise"></div>
+
+  <!-- Scroll Progress (Top Right %) -->
+  <div class="scroll-progress">
+    <div class="sp-track">
+      <div class="sp-fill" id="spFill"></div>
+    </div>
+    <div class="sp-text" id="spText">0%</div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-float" href="https://wa.me/919810624788" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 40 40" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <title>WhatsApp</title>
+      <rect width="40" height="40" rx="2" fill="#25D366"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.16382 19.8867C7.16666 12.8126 12.9486 7.05882 20.0527 7.05882C23.4986 7.06024 26.7359 8.39611 29.1691 10.8205C31.6023 13.2448 32.9425 16.4695 32.9412 19.897C32.9383 26.9711 27.156 32.7255 20.0526 32.7255C17.9484 32.7248 15.8827 32.2146 14.0352 31.2426L7.58219 32.9272C7.27122 33.0084 6.989 32.7225 7.07425 32.4126L8.79752 26.1482C7.72503 24.2382 7.16292 22.0869 7.16382 19.8867ZM20.0463 30.4359H20.042C18.1611 30.4352 16.3163 29.9322 14.7069 28.9817L14.3241 28.7556L10.3569 29.7914L11.4158 25.9417L11.1666 25.547C10.1173 23.886 9.56313 21.9663 9.56399 19.9951C9.56629 14.2432 14.2686 9.5636 20.0505 9.5636C22.8502 9.56454 25.482 10.6511 27.4612 12.6231C29.4402 14.5949 30.5294 17.216 30.5283 20.0035C30.526 25.7559 25.8237 30.4359 20.0463 30.4359ZM23.5806 21.4974C23.8678 21.6029 25.4084 22.3667 25.7217 22.5247C25.7829 22.5556 25.84 22.5834 25.893 22.6092C26.1116 22.7156 26.2593 22.7875 26.3223 22.8935C26.4006 23.0252 26.4006 23.6574 26.1395 24.3951C25.8784 25.1326 24.6265 25.8058 24.0245 25.8964C23.4846 25.9777 22.8015 26.0116 22.0509 25.7713C21.5958 25.6258 21.0121 25.4315 20.2645 25.1061C17.3272 23.8281 15.3422 20.9596 14.9667 20.4169C14.9403 20.3789 14.9219 20.3522 14.9116 20.3384L14.9091 20.335C14.7433 20.1122 13.6321 18.6183 13.6321 17.0721C13.6321 15.6177 14.3411 14.8553 14.6675 14.5044C14.6898 14.4803 14.7104 14.4582 14.7288 14.4379C15.0161 14.1219 15.3556 14.0429 15.5645 14.0429C15.7733 14.0429 15.9824 14.0448 16.165 14.054C16.1875 14.0551 16.211 14.055 16.2352 14.0548C16.4178 14.0538 16.6455 14.0525 16.87 14.5959C16.9562 14.8047 17.0823 15.114 17.2153 15.4403C17.4852 16.1024 17.7836 16.8347 17.8361 16.9405C17.9145 17.0985 17.9667 17.2829 17.8622 17.4937C17.8466 17.5253 17.8321 17.5551 17.8182 17.5836C17.7398 17.745 17.6821 17.8637 17.5489 18.0204C17.4968 18.0818 17.4429 18.1479 17.389 18.2141C17.281 18.3466 17.1729 18.4792 17.0789 18.5736C16.922 18.731 16.7587 18.9019 16.9415 19.218C17.1243 19.5341 17.7532 20.5681 18.6846 21.4053C19.686 22.3054 20.5563 22.6858 20.9974 22.8786C21.0835 22.9162 21.1533 22.9467 21.2045 22.9725C21.5178 23.1307 21.7007 23.1042 21.8834 22.8935C22.0662 22.6828 22.6667 21.9715 22.8756 21.6554C23.0845 21.3395 23.2934 21.3921 23.5806 21.4974Z" fill="white"/>
+    </svg>
+  </a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav-wrap">
+
+      <!-- LEFT BRAND -->
+      <a class="brand" href="#top">
+        <span class="dot"></span>
+        <span>Jagdish Kumar</span>
+      </a>
+
+      <!-- NAV LINKS (LEFT STYLE LIKE BEFORE) -->
+      <nav class="nav-links">
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="pill nav-link">Contact</a>
+      </nav>
+
+      <!-- RIGHT ACTIONS -->
+      <div class="nav-actions">
+
+        <!-- Premium Theme Toggle -->
+        <div class="theme-switch" id="themeToggle" aria-label="Toggle theme" role="button" tabindex="0">
+          <span class="icon moon">🌙</span>
+          <span class="icon sun">☀️</span>
+          <div class="knob"></div>
+        </div>
+
+        <!-- WhatsApp Icon (Header) -->
+        <a class="wa-header" href="https://wa.me/919810624788" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 40 40" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <title>WhatsApp</title>
+            <rect width="40" height="40" rx="2" fill="#25D366"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.16382 19.8867C7.16666 12.8126 12.9486 7.05882 20.0527 7.05882C23.4986 7.06024 26.7359 8.39611 29.1691 10.8205C31.6023 13.2448 32.9425 16.4695 32.9412 19.897C32.9383 26.9711 27.156 32.7255 20.0526 32.7255C17.9484 32.7248 15.8827 32.2146 14.0352 31.2426L7.58219 32.9272C7.27122 33.0084 6.989 32.7225 7.07425 32.4126L8.79752 26.1482C7.72503 24.2382 7.16292 22.0869 7.16382 19.8867ZM20.0463 30.4359H20.042C18.1611 30.4352 16.3163 29.9322 14.7069 28.9817L14.3241 28.7556L10.3569 29.7914L11.4158 25.9417L11.1666 25.547C10.1173 23.886 9.56313 21.9663 9.56399 19.9951C9.56629 14.2432 14.2686 9.5636 20.0505 9.5636C22.8502 9.56454 25.482 10.6511 27.4612 12.6231C29.4402 14.5949 30.5294 17.216 30.5283 20.0035C30.526 25.7559 25.8237 30.4359 20.0463 30.4359ZM23.5806 21.4974C23.8678 21.6029 25.4084 22.3667 25.7217 22.5247C25.7829 22.5556 25.84 22.5834 25.893 22.6092C26.1116 22.7156 26.2593 22.7875 26.3223 22.8935C26.4006 23.0252 26.4006 23.6574 26.1395 24.3951C25.8784 25.1326 24.6265 25.8058 24.0245 25.8964C23.4846 25.9777 22.8015 26.0116 22.0509 25.7713C21.5958 25.6258 21.0121 25.4315 20.2645 25.1061C17.3272 23.8281 15.3422 20.9596 14.9667 20.4169C14.9403 20.3789 14.9219 20.3522 14.9116 20.3384L14.9091 20.335C14.7433 20.1122 13.6321 18.6183 13.6321 17.0721C13.6321 15.6177 14.3411 14.8553 14.6675 14.5044C14.6898 14.4803 14.7104 14.4582 14.7288 14.4379C15.0161 14.1219 15.3556 14.0429 15.5645 14.0429C15.7733 14.0429 15.9824 14.0448 16.165 14.054C16.1875 14.0551 16.211 14.055 16.2352 14.0548C16.4178 14.0538 16.6455 14.0525 16.87 14.5959C16.9562 14.8047 17.0823 15.114 17.2153 15.4403C17.4852 16.1024 17.7836 16.8347 17.8361 16.9405C17.9145 17.0985 17.9667 17.2829 17.8622 17.4937C17.8466 17.5253 17.8321 17.5551 17.8182 17.5836C17.7398 17.745 17.6821 17.8637 17.5489 18.0204C17.4968 18.0818 17.4429 18.1479 17.389 18.2141C17.281 18.3466 17.1729 18.4792 17.0789 18.5736C16.922 18.731 16.7587 18.9019 16.9415 19.218C17.1243 19.5341 17.7532 20.5681 18.6846 21.4053C19.686 22.3054 20.5563 22.6858 20.9974 22.8786C21.0835 22.9162 21.1533 22.9467 21.2045 22.9725C21.5178 23.1307 21.7007 23.1042 21.8834 22.8935C22.0662 22.6828 22.6667 21.9715 22.8756 21.6554C23.0845 21.3395 23.2934 21.3921 23.5806 21.4974Z" fill="white"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- Mobile -->
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-left reveal">
+        <div class="badge">
+          Shopify • Next.js • Tailwind • Laravel CMS • WordPress Elementor • Multi-CMS
+        </div>
+
+        <h1>
+          Premium E-commerce & CMS builds with
+          <span class="grad">clean execution</span>.
+        </h1>
+
+        <p class="sub">
+          Shopify Developer & CMS Specialist with <b>6+ years</b> experience in
+          Liquid theme customization, app integrations, Next.js projects (Dynamix),
+          Tailwind UI (RepIndia), WordPress Elementor (I2V), QA testing, and multi-platform CMS operations.
+          Currently working at <b>RepIndia</b>.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+
+          <a class="btn ghost" href="assets/Jagdish_Kumar_Resume_Shopify.pdf" download>
+            Download Resume
+          </a>
+
+          <a class="btn ghost" href="#contact">Hire / Collaborate</a>
+        </div>
+
+        <div class="mini">
+          <div class="mini-item">
+            <span class="mini-title">Location</span>
+            <span class="mini-val">Ghaziabad, India</span>
+          </div>
+          <div class="mini-item">
+            <span class="mini-title">Email</span>
+            <span class="mini-val">jk.chaudhary@yahoo.com</span>
+          </div>
+          <div class="mini-item">
+            <span class="mini-title">LinkedIn</span>
+            <span class="mini-val">jagdish-kumar-7176a3b8</span>
+          </div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Shopify Liquid</span>
+          <span class="chip">Shopify Apps</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">WordPress Elementor</span>
+          <span class="chip">Laravel CMS</span>
+          <span class="chip">.NET CMS</span>
+          <span class="chip">Git / Bitbucket</span>
+          <span class="chip">QA Testing</span>
+          <span class="chip">ChatGPT / Cursor AI / Gemini</span>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="profile-card">
+          <div class="profile-top">
+            <img class="avatar" src="assets/profile_premium.png" alt="Jagdish Kumar" />
+            <div class="profile-meta">
+              <h3>Jagdish Kumar</h3>
+              <p>Shopify Developer @ RepIndia</p>
+            </div>
+          </div>
+
+          <div class="profile-stats">
+            <div class="stat">
+              <span class="stat-num">11+</span>
+              <span class="stat-label">Years</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Brands</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">Multi</span>
+              <span class="stat-label">CMS</span>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <a class="btn small ghost" href="https://www.linkedin.com/in/jagdish-kumar-7176a3b8" target="_blank">
+              LinkedIn
+            </a>
+            <a class="btn small primary" href="#contact">Contact</a>
+          </div>
+
+          <div class="profile-note">
+            I deliver premium Shopify + CMS builds with clean UI, responsive layout, app integrations, and QA-tested output.
+          </div>
+        </div>
+
+        <div class="floating-card">
+          <div class="floating-title">Current focus</div>
+          <div class="floating-value">Shopify + Next.js builds + Elementor + Tailwind UI</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Skills & Expertise</h2>
+        <p>Premium delivery across Shopify, Next.js, Tailwind, WordPress Elementor, and enterprise CMS platforms.</p>
+      </div>
+
+      <div class="grid skills-grid">
+        <div class="card reveal">
+          <h3>Shopify Development</h3>
+          <ul>
+            <li>Liquid Theme Editing (Sections, Snippets)</li>
+            <li>Theme Customization (Pixel-perfect UI)</li>
+            <li>Storefront Responsiveness + Performance</li>
+            <li>Product Page / Landing Page Enhancements</li>
+            <li>Shopify App Integrations (Reviews, Upsell, Tracking, etc.)</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Next.js + Tailwind</h3>
+          <ul>
+            <li>Next.js (Dynamix project work)</li>
+            <li>Tailwind CSS (RepIndia projects)</li>
+            <li>Modern UI components & layouts</li>
+            <li>Responsive grids, clean typography</li>
+            <li>Production-ready UI delivery</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>WordPress + Elementor</h3>
+          <ul>
+            <li>Elementor page building</li>
+            <li>I2V projects execution</li>
+            <li>Content management & layout improvements</li>
+            <li>Speed + mobile optimization</li>
+            <li>CMS maintenance & updates</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>CMS & QA Workflow</h3>
+          <ul>
+            <li>Shopify + WordPress Elementor</li>
+            <li>Laravel & .NET CMS</li>
+            <li>Magento + Node.js CMS (basic ops)</li>
+            <li>Cross-browser + mobile QA testing</li>
+            <li>Bug fixing & clean delivery</li>
+            <li>Git + Bitbucket + Trello + Slack workflow</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tools-strip reveal">
+        <span>Git</span>
+        <span>Shopify Admin</span>
+        <span>WordPress</span>
+        <span>QA Testing</span>
+        <span>Cursor AI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Experience</h2>
+        <p>Client-focused delivery with strong execution, coordination, and clean output.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>RepIndia — Shopify Developer<br /><span>Saket New Delhi</span></h3>
+              <span>Jul 2022 – Present</span>
+            </div>
+            <ul>
+              <li>Shopify theme customization using Liquid, HTML, CSS, JS.</li>
+              <li>Tailwind CSS work for modern UI projects (RepIndia).</li>
+              <li>App integrations, tracking scripts, and storefront enhancements.</li>
+              <li>Cross-browser QA, bug fixing, mobile optimization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>RepIndia — Web Developer Consultant <br /><span>Hybrid</span></h3>
+              <span>Dec 2021 – Jul 2022</span>
+            </div>
+            <ul>
+              <li>Handled Shopify + WordPress CMS tasks across multiple brands.</li>
+              <li>Theme edits, content updates, integrations support.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>Dmart - Avenue Supermart Ltd. — Facilities Manager<br /><span>Indirapuram Ghaziabad</span></h3>
+              <span>Sep 2020 – Dec 2021</span>
+            </div>
+            <ul>
+              <li>Facility Management / Store Management</li>
+              <li>Retail Operation and Multi-Store Operation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>Silaris Information Pvt. Ltd. — LG CIC<br /><span> Knowledge Park 3 Greater Noida</span></h3>
+              <span>Dec 2019 – Sep 2020</span>
+            </div>
+            <ul>
+              <li>Customer Service Management</li>
+              <li>Technical Support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>Freelancer — Web CMS Specialist<br /><span>Remote</span></h3>
+              <span>Dec 2017 – Dec 2019</span>
+            </div>
+            <ul>
+              <li>Shopify & WordPress support: content, layout, and UI updates.</li>
+              <li>Delivered clean and client-ready CMS updates.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>RepIndia — Web Developer<br /><span>Saket New Delhi</span></h3>
+              <span>Oct 2014 – Nov 2017</span>
+            </div>
+            <ul>
+              <li>HTML, JSON, .Net and WordPress support: content, layout, and UI updates.</li>
+              <li>Delivered clean and client-ready CMS updates.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES (ICONS BACK) -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Services</h2>
+        <p>Client-ready delivery for Shopify, Next.js, Tailwind UI, and multi-platform CMS execution.</p>
+      </div>
+
+      <div class="grid services-grid">
+        <div class="card service reveal">
+          <div class="icon">🛍️</div>
+          <h3>Shopify Store Setup</h3>
+          <p>Theme setup, store configuration, products, collections, navigation, and homepage build with premium UI structure.</p>
+        </div>
+
+        <div class="card service reveal">
+          <div class="icon">🧩</div>
+          <h3>Theme Customization (Liquid)</h3>
+          <p>Sections/snippets, pixel-perfect UI changes, responsive fixes, and performance-friendly Shopify theme editing.</p>
+        </div>
+
+        <div class="card service reveal">
+          <div class="icon">🔌</div>
+          <h3>Shopify App Integrations</h3>
+          <p>Reviews, upsell, tracking scripts, conversion tools, analytics, and app-based storefront enhancements.</p>
+        </div>
+
+        <div class="card service reveal">
+          <div class="icon">⚡</div>
+          <h3>Next.js UI Development</h3>
+          <p>Next.js work (Dynamix) with clean layouts, structured components, and professional UI execution.</p>
+        </div>
+
+        <div class="card service reveal">
+          <div class="icon">🎨</div>
+          <h3>Tailwind CSS Projects</h3>
+          <p>RepIndia projects using Tailwind UI: modern layouts, responsive grids, clean typography, and fast delivery.</p>
+        </div>
+
+        <div class="card service reveal">
+          <div class="icon">🧱</div>
+          <h3>WordPress Elementor</h3>
+          <p>I2V Elementor builds, layout fixes, CMS updates, speed improvements, and mobile-ready WordPress execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Project Highlights</h2>
+      <p>Shopify, Next.js, Tailwind, WordPress Elementor, and enterprise CMS projects.</p>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid projects-grid">
+      <div class="p-card reveal">
+        <div class="p-title">Haldiram UK</div>
+        <div class="p-tags"><span>Shopify</span><span>UI</span><span>QA</span></div>
+        <p>Landing page updates, product page enhancements, and cross-browser testing.</p>
+        <a class="jk" href="https://www.haldiramuk.com/" target="_blank">www.haldiramuk.com</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-title">Dynamix Group</div>
+        <div class="p-tags"><span>Next.js</span><span>UI</span><span>CMS</span></div>
+        <p>Next.js development support with clean UI delivery and structured implementation.</p>
+        <a class="jk" href="https://www.dynamixgroup.co.in/" target="_blank">www.dynamixgroup.co.in</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-title">Canon India</div>
+        <div class="p-tags"><span>Custom CMS</span><span>QA</span><span>Content</span></div>
+        <p>CMS content updates, page fixes, and quality assurance for production.</p>
+        <a class="jk" href="https://in.canon/" target="_blank">in.canon</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-title">I2V</div>
+        <div class="p-tags"><span>WordPress</span><span>Elementor</span><span>CMS</span></div>
+        <p>WordPress Elementor page builds, updates, optimization, and client-ready layouts.</p>
+        <a class="jk" href="https://www.i2vsys.com/" target="_blank">www.i2vsys.com</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-title">RepIndia</div>
+        <div class="p-tags"><span>Tailwind</span><span>UI</span><span>Responsive</span></div>
+        <p>Tailwind-based UI builds, responsive layout fixes, and premium front-end execution.</p>
+        <a class="jk" href="https://www.repindia.com/" target="_blank">www.repindia.com</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="p-title">Instax</div>
+        <div class="p-tags"><span>Shopify</span><span>Liquid</span><span>QA</span></div>
+        <p>Theme customization, section improvements, responsive fixes, and QA support.</p>
+        <a class="jk" href="https://www.instax.in/" target="_blank">www.instax.in</a>
+      </div>
+    </div>
+
+    <!-- View More (OUTSIDE GRID) -->
+    <div class="viewmore-wrap reveal">
+      <button class="viewmore-btn" id="viewMoreBtn">View More Projects</button>
+
+      <div class="more-projects" id="moreProjects">
+        <div class="more-grid">
+          <div class="more-item">Thermocool (Shopify)</div>
+          <div class="more-item">Whole Food (Shopify)</div>
+          <div class="more-item">Main Hardware (Shopify)</div>
+          <div class="more-item">Xtep (Shopify)</div>
+          <div class="more-item">FYVA (Shopify)</div>
+          <div class="more-item">Drify (Shopify)</div>
+          <div class="more-item">Sterlite Electric (WordPress)</div>
+          <div class="more-item">Serentica Global (WordPress)</div>
+          <div class="more-item">Zydus (WordPress)</div>
+          <div class="more-item">Maison Dali (WordPress)</div>
+          <div class="more-item">Merino India (Laravel)</div>
+          <div class="more-item">Kajaria (Wordpress / Laravel)</div>
+          <div class="more-item">JSW (.NET)</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ACHIEVEMENTS (NEW PREMIUM SECTION) -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Achievements</h2>
+        <p>Numbers that reflect consistency, scale, and clean execution.</p>
+      </div>
+
+      <div class="grid achievements-grid reveal">
+        <div class="ach-card">
+          <span class="ach-num">50+</span>
+          <span class="ach-label">Brands Delivered</span>
+        </div>
+        <div class="ach-card">
+          <span class="ach-num">12+</span>
+          <span class="ach-label">Years Experience</span>
+        </div>
+        <div class="ach-card">
+          <span class="ach-num">200+</span>
+          <span class="ach-label">Pages Optimized</span>
+        </div>
+        <div class="ach-card">
+          <span class="ach-num">Multi</span>
+          <span class="ach-label">CMS Platforms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-card reveal">
+        <div>
+          <h2>Let’s work together</h2>
+          <p>
+            Shopify theme customization, app integrations, Next.js UI builds, Tailwind projects,
+            WordPress Elementor, or CMS maintenance — I’m available for freelance & full-time roles.
+          </p>
+
+          <div class="contact-items">
+            <a class="contact-item" href="mailto:jk.chaudhary@yahoo.com">
+              <span>Email</span>
+              <b>jk.chaudhary@yahoo.com</b>
+            </a>
+
+            <a class="contact-item" href="tel:+919810624788">
+              <span>Phone</span>
+              <b>+91-9810624788</b>
+            </a>
+
+            <a class="contact-item" target="_blank" href="https://www.linkedin.com/in/jagdish-kumar-7176a3b8">
+              <span>LinkedIn</span>
+              <b>jagdish-kumar-7176a3b8</b>
+            </a>
+
+            <a class="contact-item" target="_blank" href="https://wa.me/919810624788">
+              <span>WhatsApp</span>
+              <b>Chat Now</b>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-side">
+          <div class="contact-box">
+            <div class="cb-title">Premium Delivery</div>
+            <div class="cb-text">Pixel-perfect UI + QA-tested output.</div>
+          </div>
+
+          <div class="contact-box">
+            <div class="cb-title">Multi-Platform CMS</div>
+            <div class="cb-text">Shopify, WordPress, Next.js, Laravel, .NET.</div>
+          </div>
+
+          <div class="contact-box">
+            <div class="cb-title">Fast Response</div>
+            <div class="cb-text">Quick communication & professional coordination.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> Jagdish Kumar</span>
+      <span class="muted">Shopify • Next.js • Tailwind • Elementor • CMS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
