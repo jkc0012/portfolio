@@ -8,8 +8,8 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.opacity = "0";
     loader.style.pointerEvents = "none";
-    setTimeout(() => loader.remove(), 600);
-  }, 700);
+    setTimeout(() => loader.remove(), 300);
+  }, 400);
 });
 
 // ===============================
@@ -54,7 +54,7 @@ function setMobileRevealStagger() {
     const section = el.closest("section") || el.closest("main") || el.parentElement;
     const siblings = section ? [...section.querySelectorAll(".reveal")] : [el];
     const index = siblings.indexOf(el);
-    el.style.setProperty("--reveal-delay", index * 0.08 + "s");
+    el.style.setProperty("--reveal-delay", index * 0.05 + "s");
   });
 }
 function initRevealObserver() {
@@ -110,11 +110,12 @@ function setTheme(mode) {
 
 const savedTheme = localStorage.getItem("jk_theme");
 if (savedTheme) setTheme(savedTheme);
+else setTheme("dark");
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const current =
-      document.documentElement.getAttribute("data-theme") || "light";
+      document.documentElement.getAttribute("data-theme") || "dark";
     setTheme(current === "dark" ? "light" : "dark");
   });
 
@@ -132,16 +133,75 @@ if (themeToggle) {
 // ===============================
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
+const nav = document.getElementById("nav");
+
+function closeMobileMenu() {
+  if (mobileMenu) mobileMenu.classList.remove("show");
+}
+
+function positionMobileMenu() {
+  if (!mobileMenu || !nav) return;
+  const rect = nav.getBoundingClientRect();
+  mobileMenu.style.top = rect.bottom + "px";
+}
 
 if (menuBtn && mobileMenu) {
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("show");
+    if (mobileMenu.classList.contains("show")) positionMobileMenu();
   });
 
   mobileMenu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => mobileMenu.classList.remove("show"));
+    a.addEventListener("click", () => {
+      mobileMenu.querySelectorAll("a").forEach((l) => l.classList.remove("active"));
+      a.classList.add("active");
+      closeMobileMenu();
+    });
   });
 }
+
+window.addEventListener("resize", () => {
+  positionMobileMenu();
+  if (window.innerWidth >= 1050) closeMobileMenu();
+});
+
+// ===============================
+// Nav scroll-spy: highlight menu item for section in view
+// ===============================
+const sections = document.querySelectorAll("section[id], main[id]");
+const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+const mobileLinks = document.querySelectorAll(".mobile-menu a[href^='#']");
+
+function setActiveNav() {
+  const scrollY = window.scrollY;
+  const viewportMid = scrollY + window.innerHeight * 0.35;
+
+  let currentId = "";
+  sections.forEach((section) => {
+    const id = section.getAttribute("id");
+    if (!id) return;
+    const rect = section.getBoundingClientRect();
+    const top = rect.top + scrollY;
+    const bottom = top + rect.height;
+    if (viewportMid >= top && viewportMid <= bottom) currentId = id;
+  });
+
+  if (!currentId && scrollY < 100) currentId = "top";
+
+  function setActive(links) {
+    links.forEach((a) => {
+      const href = a.getAttribute("href");
+      const id = href === "#" ? "top" : href.slice(1);
+      if (id === currentId) a.classList.add("active");
+      else a.classList.remove("active");
+    });
+  }
+  setActive(navLinks);
+  setActive(mobileLinks);
+}
+
+window.addEventListener("scroll", () => setActiveNav(), { passive: true });
+window.addEventListener("load", () => setActiveNav());
 
 // ===============================
 // Footer year
