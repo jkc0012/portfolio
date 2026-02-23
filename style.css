@@ -313,7 +313,7 @@ h1{
   letter-spacing:-.02em;
 }
 .grad{
-  background:linear-gradient(135deg,var(--grad1),var(--grad2));
+  background:linear-gradient(135deg, #4b59ff, #ff16a2);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -360,11 +360,12 @@ h1{
 .btn.primary:hover{ transform: translateY(-2px); box-shadow: 0 12px 36px rgba(167, 139, 250, .35), 0 6px 16px rgba(56, 189, 248, .28); }
 /* Contact gradient */
 .btn-contact{
-  background: linear-gradient(90deg, #ff7d7d 0%, #ea6bff 40%, #cde600 100%);
+  background: linear-gradient(17deg, #ff7d7d 0%, #ea6bff 40%, #e60000 100%);
   color: #fff;
   border: none;
   box-shadow: 0 10px 32px rgba(234, 107, 255, .25), 0 4px 12px rgba(205, 230, 0, .15);
 }
+
 .btn-contact:hover{
   transform: translateY(-2px);
   box-shadow: 0 12px 36px rgba(234, 107, 255, .35), 0 6px 16px rgba(205, 230, 0, .2);
@@ -381,9 +382,13 @@ h1{
   box-shadow: 0 10px 28px rgba(167, 139, 250, .35), 0 4px 12px rgba(56, 189, 248, .25);
 }
 .btn.ghost{
-  background:var(--card);
-  color:var(--text);
+      background: linear-gradient(135deg, #4b59ff, #ff16a2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    box-shadow: 0 10px 32px rgba(234, 107, 255, .25), 0 4px 12px rgba(205, 230, 0, .15);
 }
+
 .btn.ghost:hover{transform:translateY(-2px)}
 
 .mini{
