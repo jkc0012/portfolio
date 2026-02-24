@@ -224,3 +224,19 @@ if (viewMoreBtn && moreProjects) {
       : "View More Projects";
   });
 }
+
+// ===============================
+// Show More Experience
+// ===============================
+const experienceTimeline = document.getElementById("experienceTimeline");
+const showMoreExperienceBtn = document.getElementById("showMoreExperienceBtn");
+
+if (experienceTimeline && showMoreExperienceBtn) {
+  showMoreExperienceBtn.addEventListener("click", () => {
+    experienceTimeline.classList.toggle("expanded");
+
+    showMoreExperienceBtn.textContent = experienceTimeline.classList.contains("expanded")
+      ? "Show Less Experience"
+      : "Show More Experience";
+  });
+}

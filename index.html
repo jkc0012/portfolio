@@ -286,7 +286,7 @@
         <p>Client-focused delivery with strong execution, coordination, and clean output.</p>
       </div>
 
-      <div class="timeline">
+      <div class="timeline" id="experienceTimeline">
         <div class="t-item reveal">
           <div class="t-dot"></div>
           <div class="t-content">
@@ -317,7 +317,7 @@
           </div>
         </div>
 
-        <div class="t-item reveal">
+        <div class="t-item t-item-more reveal">
           <div class="t-dot"></div>
           <div class="t-content">
             <div class="t-top">
@@ -331,7 +331,7 @@
           </div>
         </div>
 
-        <div class="t-item reveal">
+        <div class="t-item t-item-more reveal">
           <div class="t-dot"></div>
           <div class="t-content">
             <div class="t-top">
@@ -345,7 +345,7 @@
           </div>
         </div>
 
-        <div class="t-item reveal">
+        <div class="t-item t-item-more reveal">
           <div class="t-dot"></div>
           <div class="t-content">
             <div class="t-top">
@@ -359,7 +359,7 @@
           </div>
         </div>
 
-        <div class="t-item reveal">
+        <div class="t-item t-item-more reveal">
           <div class="t-dot"></div>
           <div class="t-content">
             <div class="t-top">
@@ -374,6 +374,9 @@
         </div>
       </div>
 
+      <div class="viewmore-wrap experience-more-wrap reveal">
+        <button type="button" class="viewmore-btn" id="showMoreExperienceBtn">Show More Experience</button>
+      </div>
     </div>
   </section>
 
@@ -512,95 +515,101 @@
         <p>Numbers that reflect consistency, scale, and clean execution.</p>
       </div>
 
-      <!-- Certificates & Awards carousel (auto-sliding) -->
-      <div class="ach-carousel-wrap reveal">
-        <div class="ach-carousel" aria-label="Certificates and awards">
-          <div class="ach-carousel-track">
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/><circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </span>
-                <span class="ach-slide-label">Certificate</span>
-              </div>
-            </div>
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6l4 10h10l-8 6 3 10-9-7-9 7 3-10-8-6h10l4-10z" fill="currentColor" opacity=".9"/><path d="M18 34h12v6H18z" fill="currentColor" opacity=".6"/><path d="M20 40h8v2h-8z" fill="currentColor" opacity=".4"/></svg>
-                </span>
-                <span class="ach-slide-label">Award</span>
-              </div>
-            </div>
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 8v4M24 32v4M16 20h-4M36 20h-4M19 13l-2 2M31 31l2 2M19 27l-2-2M31 17l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </span>
-                <span class="ach-slide-label">Recognition</span>
-              </div>
-            </div>
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2 6-12z" fill="currentColor" opacity=".9"/></svg>
-                </span>
-                <span class="ach-slide-label">Excellence</span>
-              </div>
-            </div>
-            <!-- duplicate set for seamless loop -->
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/><circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </span>
-                <span class="ach-slide-label">Certificate</span>
-              </div>
-            </div>
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6l4 10h10l-8 6 3 10-9-7-9 7 3-10-8-6h10l4-10z" fill="currentColor" opacity=".9"/><path d="M18 34h12v6H18z" fill="currentColor" opacity=".6"/><path d="M20 40h8v2h-8z" fill="currentColor" opacity=".4"/></svg>
-                </span>
-                <span class="ach-slide-label">Award</span>
-              </div>
-            </div>
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 8v4M24 32v4M16 20h-4M36 20h-4M19 13l-2 2M31 31l2 2M19 27l-2-2M31 17l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </span>
-                <span class="ach-slide-label">Recognition</span>
-              </div>
-            </div>
-            <div class="ach-slide">
-              <div class="ach-slide-inner">
-                <span class="ach-slide-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2 6-12z" fill="currentColor" opacity=".9"/></svg>
-                </span>
-                <span class="ach-slide-label">Excellence</span>
+      <!-- Table layout: 4 rows × 2 columns (50% – 50%) -->
+      <div class="ach-table reveal">
+        <!-- Section 1: Left 50+ Brands | Right Slider -->
+        <div class="ach-table-cell ach-table-card">
+          <div class="ach-card">
+            <span class="ach-num">50+</span>
+            <span class="ach-label">Brands Delivered</span>
+          </div>
+        </div>
+        <div class="ach-table-cell ach-table-slider">
+          <div class="ach-carousel-wrap ach-carousel-inline">
+            <div class="ach-carousel" aria-label="Certificates and awards">
+              <div class="ach-carousel-track">
+                <div class="ach-slide">
+                  <div class="ach-slide-inner">
+                    <span class="ach-slide-icon" aria-hidden="true">
+                      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/>
+                        <circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                      <span class="ach-slide-label">Certificate</span>
+                    </div>
+                    </div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6l4 10h10l-8 6 3 10-9-7-9 7 3-10-8-6h10l4-10z" fill="currentColor" opacity=".9"/><path d="M18 34h12v6H18z" fill="currentColor" opacity=".6"/><path d="M20 40h8v2h-8z" fill="currentColor" opacity=".4"/></svg></span><span class="ach-slide-label">Award</span></div></div>
+
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 8v4M24 32v4M16 20h-4M36 20h-4M19 13l-2 2M31 31l2 2M19 27l-2-2M31 17l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Recognition</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2 6-12z" fill="currentColor" opacity=".9"/></svg></span><span class="ach-slide-label">Excellence</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/><circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Certificate</span></div></div>
+                
+                
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="grid achievements-grid reveal">
-        <div class="ach-card">
-          <span class="ach-num">50+</span>
-          <span class="ach-label">Brands Delivered</span>
+        <!-- Section 2: Left Slider | Right 10+ Years (per screenshot) -->
+        <div class="ach-table-cell ach-table-slider">
+          <div class="ach-carousel-wrap ach-carousel-inline">
+            <div class="ach-carousel" aria-label="Certificates and awards">
+              <div class="ach-carousel-track">
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/><circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Certificate</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6l4 10h10l-8 6 3 10-9-7-9 7 3-10-8-6h10l4-10z" fill="currentColor" opacity=".9"/><path d="M18 34h12v6H18z" fill="currentColor" opacity=".6"/><path d="M20 40h8v2h-8z" fill="currentColor" opacity=".4"/></svg></span><span class="ach-slide-label">Award</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 8v4M24 32v4M16 20h-4M36 20h-4M19 13l-2 2M31 31l2 2M19 27l-2-2M31 17l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Recognition</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2 6-12z" fill="currentColor" opacity=".9"/></svg></span><span class="ach-slide-label">Excellence</span></div></div>
+                
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ach-card">
-          <span class="ach-num">10+</span>
-          <span class="ach-label">Years Experience</span>
+        <div class="ach-table-cell ach-table-card">
+          <div class="ach-card">
+            <span class="ach-num">200+</span>
+            <span class="ach-label">Pages Optimized</span>
+          </div>
         </div>
-        <div class="ach-card">
-          <span class="ach-num">200+</span>
-          <span class="ach-label">Pages Optimized</span>
+        <!-- Section 3: Left 10+ Years | Right Slider -->
+        <div class="ach-table-cell ach-table-card">
+          <div class="ach-card">
+            <span class="ach-num">10+</span>
+            <span class="ach-label">Years Experience</span>
+          </div>
         </div>
-        <div class="ach-card">
-          <span class="ach-num">Multi</span>
-          <span class="ach-label">CMS Platforms</span>
+        <div class="ach-table-cell ach-table-slider">
+          <div class="ach-carousel-wrap ach-carousel-inline">
+            <div class="ach-carousel" aria-label="Certificates and awards">
+              <div class="ach-carousel-track">
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/><circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Certificate</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6l4 10h10l-8 6 3 10-9-7-9 7 3-10-8-6h10l4-10z" fill="currentColor" opacity=".9"/><path d="M18 34h12v6H18z" fill="currentColor" opacity=".6"/><path d="M20 40h8v2h-8z" fill="currentColor" opacity=".4"/></svg></span><span class="ach-slide-label">Award</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 8v4M24 32v4M16 20h-4M36 20h-4M19 13l-2 2M31 31l2 2M19 27l-2-2M31 17l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Recognition</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2 6-12z" fill="currentColor" opacity=".9"/></svg></span><span class="ach-slide-label">Excellence</span></div></div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section 4: Left Slider | Right Multi CMS -->
+        <div class="ach-table-cell ach-table-slider">
+          <div class="ach-carousel-wrap ach-carousel-inline">
+            <div class="ach-carousel" aria-label="Certificates and awards">
+              <div class="ach-carousel-track">
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L28 16h12l-10 8 4 12-14-10-14 10 4-12-10-8h12L24 4z" fill="currentColor" opacity=".9"/><circle cx="24" cy="28" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 24v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Certificate</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6l4 10h10l-8 6 3 10-9-7-9 7 3-10-8-6h10l4-10z" fill="currentColor" opacity=".9"/><path d="M18 34h12v6H18z" fill="currentColor" opacity=".6"/><path d="M20 40h8v2h-8z" fill="currentColor" opacity=".4"/></svg></span><span class="ach-slide-label">Award</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 8v4M24 32v4M16 20h-4M36 20h-4M19 13l-2 2M31 31l2 2M19 27l-2-2M31 17l2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="ach-slide-label">Recognition</span></div></div>
+                <div class="ach-slide"><div class="ach-slide-inner"><span class="ach-slide-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2 6-12z" fill="currentColor" opacity=".9"/></svg></span><span class="ach-slide-label">Excellence</span></div></div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ach-table-cell ach-table-card">
+          <div class="ach-card">
+            <span class="ach-num">Multi</span>
+            <span class="ach-label">CMS Platforms</span>
+          </div>
         </div>
       </div>
     </div>

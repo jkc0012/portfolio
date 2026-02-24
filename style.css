@@ -573,6 +573,9 @@ h1{
 /* Timeline */
 .timeline{margin-top:26px;display:grid;gap:18px}
 .t-item{display:grid;grid-template-columns:22px 1fr;gap:14px}
+.timeline:not(.expanded) .t-item-more{ display: none; }
+.timeline.expanded .t-item-more{ animation: fadeUp .35s ease forwards; }
+.experience-more-wrap{ margin-top: 22px; }
 .t-dot{
   width:14px;height:14px;border-radius:50%;
   background:linear-gradient(135deg,var(--grad1),var(--grad2));
@@ -659,6 +662,76 @@ a.jk:hover { color: #A78BFA; }
   background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(125,142,255,.06) 0%, transparent 55%);
   pointer-events: none;
 }
+/* Achievements table: 4 rows × 2 columns (50% – 50%), strict alignment */
+.ach-table{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  margin-top: 28px;
+  gap: 14px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.ach-table-cell{
+  min-height: 150px;
+  min-width: 0;
+  padding: 24px;
+  display: flex;
+  align-items: stretch;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  box-shadow: 0 2px 12px rgba(0,0,0,.04), 0 1px 3px rgba(0,0,0,.03);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.ach-table-cell .ach-card{
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+.ach-table-cell .ach-card:hover{ transform: none; box-shadow: none; }
+.ach-table-cell.ach-table-card .ach-num{ font-size: 38px; font-weight: 900; color: var(--text); }
+.ach-table-cell.ach-table-card .ach-label{ font-size: 14px; color: var(--muted); font-weight: 500; margin-top: 6px; }
+.ach-table-slider .ach-carousel-wrap.ach-carousel-inline{
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+  min-height: 100px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+.ach-carousel-inline .ach-carousel{
+  height: 100%;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+.ach-carousel-inline .ach-slide{ flex: 0 0 200px; padding: 10px; }
+.ach-carousel-inline .ach-slide-inner{
+  min-height: 110px;
+  padding: 18px 14px;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.04), 0 1px 2px rgba(0,0,0,.03);
+}
+.ach-carousel-inline .ach-slide:hover .ach-slide-inner{
+  box-shadow: 0 4px 16px rgba(0,0,0,.06), 0 2px 4px rgba(0,0,0,.04);
+}
+.ach-carousel-inline .ach-slide-icon{ width: 42px; height: 42px; margin-bottom: 10px; color: rgba(125,142,255,.9); }
+.ach-carousel-inline .ach-slide-label{ font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text); }
+
 .achievements-grid{grid-template-columns:repeat(4,1fr)}
 .ach-card{
   padding:26px;
@@ -1013,6 +1086,28 @@ a.jk:hover { color: #A78BFA; }
   .p-tags span{ padding: 6px 10px; font-size: 11px; }
 
   .achievements-container{ width: min(100% - 16px, 100%); padding-left: 14px; padding-right: 14px; }
+  .ach-table{ grid-template-columns: 1fr; margin-top: 22px; gap: 12px; }
+  /* Mobile: all four sections same layout — Title card then Slider card (screenshot style) */
+  .ach-table-cell:nth-child(1){ order: 1; }
+  .ach-table-cell:nth-child(2){ order: 2; }
+  .ach-table-cell:nth-child(3){ order: 4; }
+  .ach-table-cell:nth-child(4){ order: 3; }
+  .ach-table-cell:nth-child(5){ order: 5; }
+  .ach-table-cell:nth-child(6){ order: 6; }
+  .ach-table-cell:nth-child(7){ order: 8; }
+  .ach-table-cell:nth-child(8){ order: 7; }
+  /* Title cards: prominent white rounded card, centered stat + label */
+  .ach-table-cell.ach-table-card{ min-height: 100px; padding: 28px 20px; border-radius: 20px; }
+  .ach-table-cell.ach-table-card .ach-num{ font-size: 36px; }
+  .ach-table-cell.ach-table-card .ach-label{ font-size: 14px; margin-top: 6px; }
+  /* Slider cards: white container with horizontal row of small icon cards inside */
+  .ach-table-cell.ach-table-slider{ min-height: 120px; padding: 18px; border-radius: 20px; }
+  .ach-table-cell{ min-height: 100px; padding: 16px; }
+  .ach-table-cell .ach-card{ min-height: 100px; }
+  .ach-carousel-inline .ach-slide{ flex: 0 0 160px; padding: 8px; }
+  .ach-carousel-inline .ach-slide-inner{ min-height: 100px; padding: 16px 12px; border-radius: 14px; }
+  .ach-carousel-inline .ach-slide-icon{ width: 40px; height: 40px; margin-bottom: 10px; }
+  .ach-carousel-inline .ach-slide-label{ font-size: 11px; }
   .ach-carousel-wrap{ margin-top: 22px; margin-bottom: 22px; }
   .ach-slide{ flex: 0 0 240px; padding: 12px; }
   .ach-slide-inner{ min-height: 140px; padding: 20px 16px; }
@@ -1047,6 +1142,13 @@ a.jk:hover { color: #A78BFA; }
   .container{ width: min(100% - 20px, 480px); }
 
   .achievements-container{ width: min(100% - 12px, 100%); padding-left: 10px; padding-right: 10px; }
+  .ach-table-cell.ach-table-card{ padding: 24px 18px; border-radius: 18px; }
+  .ach-table-cell.ach-table-card .ach-num{ font-size: 32px; }
+  .ach-table-cell.ach-table-slider{ padding: 14px; border-radius: 18px; }
+  .ach-table-cell{ min-height: 100px; padding: 14px; }
+  .ach-carousel-inline .ach-slide{ flex: 0 0 140px; }
+  .ach-carousel-inline .ach-slide-inner{ min-height: 90px; padding: 14px 10px; border-radius: 12px; }
+  .ach-carousel-inline .ach-slide-icon{ width: 36px; height: 36px; }
   .ach-slide{ flex: 0 0 220px; padding: 10px; }
   .ach-slide-inner{ min-height: 130px; padding: 18px 14px; }
 
