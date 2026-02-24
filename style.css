@@ -764,8 +764,12 @@ a.jk:hover { color: #A78BFA; }
 .ach-carousel-track{
   display: flex;
   width: max-content;
-  animation: ach-slide 24s linear infinite;
+  animation: ach-slide 14s linear infinite;
   gap: 0;
+}
+.ach-carousel-track--ltr{
+  animation-name: ach-slide;
+  animation-direction: reverse;
 }
 .ach-carousel-track:hover{
   animation-play-state: paused;
@@ -905,7 +909,7 @@ a.jk:hover { color: #A78BFA; }
 }
 
 /* Reveal */
-.reveal{ opacity: 0; transform: translateY(16px); transition: opacity .35s ease, transform .35s ease; }
+.reveal{ opacity: 0; transform: translateY(16px); transition: opacity .15s ease, transform .15s ease; }
 .reveal.show{ opacity: 1; transform: translateY(0); }
 
 /* Mobile: section-by-section reveal with stagger */

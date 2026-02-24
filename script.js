@@ -27,7 +27,7 @@ function getRevealObserver() {
           if (entry.isIntersecting) entry.target.classList.add("show");
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -35% 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -28% 0px" }
     );
   }
   return new IntersectionObserver(
@@ -36,7 +36,7 @@ function getRevealObserver() {
         if (entry.isIntersecting) entry.target.classList.add("show");
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.08 }
   );
 }
 
@@ -54,7 +54,7 @@ function setMobileRevealStagger() {
     const section = el.closest("section") || el.closest("main") || el.parentElement;
     const siblings = section ? [...section.querySelectorAll(".reveal")] : [el];
     const index = siblings.indexOf(el);
-    el.style.setProperty("--reveal-delay", index * 0.05 + "s");
+    el.style.setProperty("--reveal-delay", index * 0.02 + "s");
   });
 }
 function initRevealObserver() {
