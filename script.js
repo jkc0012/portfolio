@@ -137,6 +137,7 @@ const nav = document.getElementById("nav");
 
 function closeMobileMenu() {
   if (mobileMenu) mobileMenu.classList.remove("show");
+  if (menuBtn) menuBtn.classList.remove("open");
 }
 
 function positionMobileMenu() {
@@ -148,6 +149,7 @@ function positionMobileMenu() {
 if (menuBtn && mobileMenu) {
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("show");
+    menuBtn.classList.toggle("open");
     if (mobileMenu.classList.contains("show")) positionMobileMenu();
   });
 
@@ -159,6 +161,17 @@ if (menuBtn && mobileMenu) {
     });
   });
 }
+
+// Close mobile menu when clicking outside of it
+document.addEventListener("click", (event) => {
+  if (!mobileMenu || !menuBtn) return;
+  const target = event.target;
+  const isClickInsideMenu = mobileMenu.contains(target);
+  const isClickOnButton = menuBtn.contains(target);
+  if (!isClickInsideMenu && !isClickOnButton) {
+    closeMobileMenu();
+  }
+});
 
 window.addEventListener("resize", () => {
   positionMobileMenu();
